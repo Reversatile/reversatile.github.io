@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reversatile</title>
+  </head>
+  <body>
+    <button onclick="sendMessage()">Send</button>
+  </body>
+  <h1>Discord Webhook by Reversatile v1.0.2</h1>
+
+  <script>
+    var name=prompt('Message')
+    function sendMessage() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discordapp.com/api/webhooks/726539851180146760/aVOQCq2JirSQMAAh51tPVKtLQgrymnapkCcKEOFFNWAeQWs6fPOsB4CkCXwbCLecVUNV");
+
+      request.setRequestHeader('Content-type', 'application/json');
+      
+      var params = {
+        username: "Reversatile",
+        avatar_url: "https://avatars1.githubusercontent.com/u/54844578?s=96&v=4",
+        content: name
+      }
+
+      request.send(JSON.stringify(params));
+    }
+  </script>
+</html>
