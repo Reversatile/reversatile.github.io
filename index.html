@@ -7,12 +7,13 @@
   </head>
   <body>
     <form>
-         Student Name:<br> <input type="text" name="Name of bot">
+         name:<br> <input type="text" name="Name of bot">
          <br>
-         Student Subject:<br> <input type="text" name="Profile picture
+         picture:<br> <input type="text" name="Profile picture">
          <br>
-         Rank:<br> <input type="text" name="Message
+         message:<br> <input type="text" name="Message">
     </form>
+      
     <button onclick="sendMessage()">Send</button>
   </body>
   <h1>Discord</h1>
@@ -23,11 +24,11 @@
       request.open("POST", "https://discordapp.com/api/webhooks/726539851180146760/aVOQCq2JirSQMAAh51tPVKtLQgrymnapkCcKEOFFNWAeQWs6fPOsB4CkCXwbCLecVUNV");
 
       request.setRequestHeader('Content-type', 'application/json');
-
+      
       var params = {
-        username: "Test",
-        avatar_url: "https://cdn.discordapp.com/attachments/624656035595943938/724954298068500480/hijab_1_1.jpg",
-        content: "Test69"
+        username: name,
+        avatar_url: picture,
+        content: message
       }
 
       request.send(JSON.stringify(params));
