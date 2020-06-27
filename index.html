@@ -6,20 +6,12 @@
     <title>Reversatile</title>
   </head>
   <body>
-    <form>
-         name:<br> <input type="text" name="name">
-         <br>
-         picture:<br> <input type="text" name="picture">
-         <br>
-         message:<br> <input type="text" name="message">
-    </form>
-      
     <button onclick="sendMessage()">Send</button>
   </body>
-  <h1>Discord Webhook by Reversatile v1.0.0</h1>
+  <h1>Discord Webhook by Reversatile v1.0.2</h1>
 
   <script>
-    var name=prompt('your name please')
+    var name=prompt('Message')
     function sendMessage() {
       var request = new XMLHttpRequest();
       request.open("POST", "https://discordapp.com/api/webhooks/726539851180146760/aVOQCq2JirSQMAAh51tPVKtLQgrymnapkCcKEOFFNWAeQWs6fPOsB4CkCXwbCLecVUNV");
@@ -28,7 +20,7 @@
       
       var params = {
         username: "Reversatile",
-        avatar_url: "https://cdn.discordapp.com/attachments/624656035595943938/724954298068500480/hijab_1_1.jpg",
+        avatar_url: "https://avatars1.githubusercontent.com/u/54844578?s=96&v=4",
         content: name
       }
 
